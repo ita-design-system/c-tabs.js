@@ -1,0 +1,49 @@
+---
+layout: libdoc/page-codemirror
+permalink: index.html
+unlisted: true
+---
+<nav>
+    <a  href="#" 
+        my-tab="foo" 
+        class="c-txt m-ff-lead-700 m-td-none">
+        Foo
+    </a>
+    <a  href="#" 
+        my-tab="bar" 
+        class="c-txt m-ff-lead-400 m-td-none">
+        Bar
+    </a>
+    <a  href="#" 
+        my-tab="foobar" 
+        class="c-txt m-ff-lead-400 m-td-none">
+        Foobar
+    </a>
+</nav>
+<div 
+    data-pane-default-class="u-d-none"
+    data-pane-active-class=" "
+    data-tab-default-class="c-txt m-ff-lead-400 m-td-none"
+    data-tab-active-class="c-txt m-ff-lead-700 m-td-none">
+    <div my-tab-name="foo">
+        <h2>Foo tab content</h2>
+    </div>
+    <div my-tab-name="bar" class="u-d-none">
+        <h2>Bar tab content</h2>
+    </div>
+    <div my-tab-name="foobar" class="u-d-none">
+        <h2>Foobar tab content</h2>
+    </div>
+</div>
+<!-- DEMO UNIQUEMENT -->
+<style>
+    body {
+        padding: var(--ita-spacing-4);
+        background-color: var(--ita-color-primary-100);
+        color: var(--ita-color-primary-800);
+        font-family: var(--ita-font-family-mono);
+        font-size: 1rem;
+        line-height: 1.5rem;
+        padding-bottom: 50vh;
+    }
+</style>
