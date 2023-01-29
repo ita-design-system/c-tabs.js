@@ -1,5 +1,6 @@
 /**
-* MY TABS NATIVE
+* C-TABS
+* Simple tabs management
 */
 const cTabs = {
     /**
@@ -49,27 +50,29 @@ const cTabs = {
         cTabs.instances = {};
         // Build instances of tabs and panes
         // Each pane/tab name is unique
-        document.querySelectorAll('[my-tab-name]').forEach(function(el) {
+        document.querySelectorAll('[c-tab-name]').forEach(function(el) {
             // Parameters must be set on panes container
             if (el.parentElement.dataset.paneDefaultClass !== undefined
                 && el.parentElement.dataset.paneActiveClass !== undefined
                 && el.parentElement.dataset.tabDefaultClass !== undefined
                 && el.parentElement.dataset.tabActiveClass !== undefined) {
-                console.log('ok pour '+el);
-                const tab_id = el.getAttribute('my-tab-name');
+                const tab_id = el.getAttribute('c-tab-name');
                 cTabs.instances[tab_id] = {
                     // Triggers that toggle open/close the specified pane
-                    els_tabs: document.querySelectorAll('[my-tab="'+tab_id+'"]'),
+                    els_tabs: document.querySelectorAll('[c-tab="'+tab_id+'"]'),
                     // All triggers related to the panes container (including current)
                     els_related_tabs: [],
                     // All panes into the same container
                     els_panes: [],
                     // The pane element
                     el_pane: el,
-                    // The panes container element
-                    el_panes: el.parentElement,
-                    // Init default/user settings to apply
-                    options: {}
+                    // Settings to apply
+                    options: {
+                        paneDefaultClass: el.parentElement.dataset.paneDefaultClass,
+                        paneActiveClass: el.parentElement.dataset.paneActiveClass,
+                        tabDefaultClass: el.parentElement.dataset.tabDefaultClass,
+                        tabActiveClass: el.parentElement.dataset.tabActiveClass
+                    }
                 }
                 // Populate all panes into the same container
                 // + all related triggers 
@@ -77,27 +80,11 @@ const cTabs = {
                     // Pane contained into the parent container
                     cTabs.instances[tab_id].els_panes.push(el.parentElement.children[index]);
                     // Related triggers pointing to this pane
-                    const related_tab_id = el.parentElement.children[index].getAttribute('my-tab-name');
-                    document.querySelectorAll('[my-tab="'+related_tab_id+'"]').forEach(function(el_related_tab) {
+                    const related_tab_id = el.parentElement.children[index].getAttribute('c-tab-name');
+                    document.querySelectorAll('[c-tab="'+related_tab_id+'"]').forEach(function(el_related_tab) {
                         cTabs.instances[tab_id].els_related_tabs.push(el_related_tab);
                     });
                 });
-                // Apply default options
-                // Object.keys(cTabs.defaults.options).forEach(function(param) {
-                //     cTabs.instances[tab_id]['options'][param] = cTabs.defaults.options[param];
-                // });
-                // Check user options attribute on panes container
-                // const user_options_name = el.parentElement.getAttribute('my-tabs-options');
-                // If present
-                // if (user_options_name !== null) {
-                //     // Check if object
-                //     if (typeof myTabsOptions[user_options_name] == 'object') {
-                //         // Iterate each overridden parameter 
-                //         Object.keys(myTabsOptions[user_options_name]).forEach(function(param) {
-                //             cTabs.instances[tab_id]['options'][param] = myTabsOptions[user_options_name][param];
-                //         });
-                //     }
-                // }
             }
             
         });

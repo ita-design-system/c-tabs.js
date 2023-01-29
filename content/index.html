@@ -5,45 +5,115 @@ unlisted: true
 ---
 <nav>
     <a  href="#" 
-        my-tab="foo" 
-        class="c-txt m-ff-lead-700 m-td-none">
-        Foo
+        c-tab="foo" 
+        class="
+            c-dis m-inline-flex
+            c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+            c-txt m-ff-lead-700 m-ws-nowrap m-td-none
+            c-skin m-c-primary-500 m-bb-5">
+        Tab numéro 1
     </a>
     <a  href="#" 
-        my-tab="bar" 
-        class="c-txt m-ff-lead-400 m-td-none">
-        Bar
+        c-tab="bar" 
+        class="
+        c-dis m-inline-flex
+        c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+        c-txt m-ff-lead-400 m-ws-nowrap m-td-none
+        c-skin m-c-primary-500 m-bb-3">
+        Tab numéro 2
     </a>
     <a  href="#" 
-        my-tab="foobar" 
-        class="c-txt m-ff-lead-400 m-td-none">
-        Foobar
+        c-tab="foobar" 
+        class="
+        c-dis m-inline-flex
+        c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+        c-txt m-ff-lead-400 m-ws-nowrap m-td-none
+        c-skin m-c-primary-500 m-bb-3">
+        Tab numéro 3
     </a>
 </nav>
 <div 
     data-pane-default-class="u-d-none"
     data-pane-active-class=" "
-    data-tab-default-class="c-txt m-ff-lead-400 m-td-none"
-    data-tab-active-class="c-txt m-ff-lead-700 m-td-none">
-    <div my-tab-name="foo">
-        <h2>Foo tab content</h2>
+    data-tab-default-class="
+        c-dis m-inline-flex
+        c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+        c-txt m-ff-lead-400 m-ws-nowrap m-td-none
+        c-skin m-c-primary-500 m-bb-3"
+    data-tab-active-class="
+        c-dis m-inline-flex
+        c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+        c-txt m-ff-lead-700 m-ws-nowrap m-td-none
+        c-skin m-c-primary-500 m-bb-5">
+    <div c-tab-name="foo">
+        Foo tab content
     </div>
-    <div my-tab-name="bar" class="u-d-none">
-        <h2>Bar tab content</h2>
+    <div c-tab-name="bar" class="u-d-none">
+        Bar tab content
     </div>
-    <div my-tab-name="foobar" class="u-d-none">
-        <h2>Foobar tab content</h2>
+    <div c-tab-name="foobar" class="u-d-none">
+        Foobar tab content
+        <nav class="c-dim m-mt-6">
+            <a  href="#" 
+                c-tab="sub-foo" 
+                class="
+                c-dis m-inline-flex
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-700 m-ws-nowrap m-td-none m-fs-3
+                c-skin m-c-primary-500 m-bb-11">
+                Sous-tab 1
+            </a>
+            <a  href="#" 
+                c-tab="sub-bar" 
+                class="
+                c-dis m-inline-flex
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-ws-nowrap m-td-none m-fs-3
+                c-skin m-c-primary-500 m-bb-5">
+                Sous-tab 2
+            </a>
+            <a  href="#" 
+                c-tab="sub-foobar" 
+                class="
+                c-dis m-inline-flex
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-ws-nowrap m-td-none m-fs-3
+                c-skin m-c-primary-500 m-bb-5">
+                Sous-tab 3
+            </a>
+        </nav>
+        <div 
+            data-pane-default-class="u-d-none"
+            data-pane-active-class=" "
+            data-tab-default-class="
+                c-dis m-inline-flex
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-ws-nowrap m-td-none m-fs-3
+                c-skin m-c-primary-500 m-bb-5"
+            data-tab-active-class="
+                c-dis m-inline-flex
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-700 m-ws-nowrap m-td-none m-fs-3
+                c-skin m-c-primary-500 m-bb-11">
+            <div c-tab-name="sub-foo">Sub-tab 1 content</div>
+            <div c-tab-name="sub-bar" class="u-d-none">Sub-tab 2 content</div>
+            <div c-tab-name="sub-foobar" class="u-d-none">Sub-tab 3 content</div>
+        </div>
     </div>
 </div>
 <!-- DEMO UNIQUEMENT -->
 <style>
     body {
         padding: var(--ita-spacing-4);
-        background-color: var(--ita-color-primary-100);
         color: var(--ita-color-primary-800);
         font-family: var(--ita-font-family-mono);
         font-size: 1rem;
         line-height: 1.5rem;
         padding-bottom: 50vh;
+    }
+    [c-tab-name] {
+        padding: var(--ita-spacing-4);
+        margin-top: var(--ita-spacing-4);
+        background-color: var(--ita-color-primary-100);
     }
 </style>
