@@ -53,13 +53,79 @@ unlisted: true
             c-txt m-ff-lead-700 m-ws-nowrap m-td-none
             c-skin m-c-primary-500 m-bb-5">
     <div c-tab-name="tab1">
-        Onglet numéro 1
+        Onglet numéro 1. 
+        <nav class="
+            c-dis m-flex m-main-space-between
+            c-dim m-mt-6">
+            <a  href="#"
+                class="
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-fs-3 m-td-none
+                c-skin m-disabled m-b-0 m-brad-4"
+                disabled>
+                Précédent
+            </a>
+            <a  href="#"
+                class="
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-fs-3 m-td-none
+                c-skin m-scheme-1 m-brad-4"
+                title="Onglet numéro 2"
+                onclick="cTabs.open('tab2')">
+                Suivant
+            </a>
+        </nav>
     </div>
     <div c-tab-name="tab2" class="u-d-none">
         Onglet numéro 2
+        <nav class="
+            c-dis m-flex m-main-space-between
+            c-dim m-mt-6">
+            <a  href="#"
+                class="
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-fs-3 
+                c-skin m-c-primary-900"
+                title="Onglet numéro 1"
+                onclick="cTabs.open('tab1')">
+                Précédent
+            </a>
+            <a  href="#"
+                class="
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-fs-3 m-td-none
+                c-skin m-scheme-1 m-brad-4"
+                title="Onglet numéro 3"
+                onclick="cTabs.open('tab3')">
+                Suivant
+            </a>
+        </nav>
     </div>
-    <div c-tab-name="tab3" class="u-d-none">
+    <div c-tab-name="tab3" 
+        id="optional-id-tab2" 
+        class="u-d-none">
         Onglet numéro 3
+        <nav class="
+            c-dis m-flex m-main-space-between
+            c-dim m-mt-6">
+            <a  href="#"
+                class="
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-fs-3 
+                c-skin m-c-primary-900"
+                title="Onglet numéro 2"
+                onclick="cTabs.open('tab2')">
+                Précédent
+            </a>
+            <a  href="#"
+                class="
+                c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+                c-txt m-ff-lead-400 m-fs-3 m-td-none
+                c-skin m-disabled m-b-0 m-brad-4"
+                disabled>
+                Suivant
+            </a>
+        </nav>
         <nav class="c-dim m-mt-6">
             <a  href="#" 
                 c-tab="sub-tab1" 
