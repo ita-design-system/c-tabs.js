@@ -1,6 +1,8 @@
 /**
 * C-TABS
+* v0.1.0
 * Simple tabs management
+* https://github.com/ita-design-system/c-tabs.js
 */
 const cTabs = {
     /**
