@@ -5,7 +5,7 @@ unlisted: true
 ---
 <nav>
     <a  href="#" 
-        c-tab="foo" 
+        c-tab="tab1" 
         class="
             c-dis m-inline-flex
             c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
@@ -14,7 +14,7 @@ unlisted: true
         Tab numéro 1
     </a>
     <a  href="#" 
-        c-tab="bar" 
+        c-tab="tab2" 
         class="
         c-dis m-inline-flex
         c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
@@ -23,7 +23,7 @@ unlisted: true
         Tab numéro 2
     </a>
     <a  href="#" 
-        c-tab="foobar" 
+        c-tab="tab3" 
         class="
         c-dis m-inline-flex
         c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
@@ -32,30 +32,37 @@ unlisted: true
         Tab numéro 3
     </a>
 </nav>
-<div 
-    data-pane-default-class="u-d-none"
-    data-pane-active-class=" "
-    data-tab-default-class="
-        c-dis m-inline-flex
-        c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
-        c-txt m-ff-lead-400 m-ws-nowrap m-td-none
-        c-skin m-c-primary-500 m-bb-3"
-    data-tab-active-class="
-        c-dis m-inline-flex
-        c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
-        c-txt m-ff-lead-700 m-ws-nowrap m-td-none
-        c-skin m-c-primary-500 m-bb-5">
-    <div c-tab-name="foo">
-        Foo tab content
+<!-- 
+    CONTENEUR DES ONGLETS
+    Doit contenir les attributs suivants
+    data-pane-default-class définit la classe d'un onglet fermé
+    data-pane-active-class définit la classe de l'onglet actif
+    data-tab-default-class définit la classe du bouton tab fermé
+    data-tab-active-class définit la classe du bouton tab actif
+-->
+<div    data-pane-default-class="u-d-none"
+        data-pane-active-class=""
+        data-tab-default-class="
+            c-dis m-inline-flex
+            c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+            c-txt m-ff-lead-400 m-ws-nowrap m-td-none
+            c-skin m-c-primary-500 m-bb-3"
+        data-tab-active-class="
+            c-dis m-inline-flex
+            c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
+            c-txt m-ff-lead-700 m-ws-nowrap m-td-none
+            c-skin m-c-primary-500 m-bb-5">
+    <div c-tab-name="tab1">
+        Onglet numéro 1
     </div>
-    <div c-tab-name="bar" class="u-d-none">
-        Bar tab content
+    <div c-tab-name="tab2" class="u-d-none">
+        Onglet numéro 2
     </div>
-    <div c-tab-name="foobar" class="u-d-none">
-        Foobar tab content
+    <div c-tab-name="tab3" class="u-d-none">
+        Onglet numéro 3
         <nav class="c-dim m-mt-6">
             <a  href="#" 
-                c-tab="sub-foo" 
+                c-tab="sub-tab1" 
                 class="
                 c-dis m-inline-flex
                 c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
@@ -64,7 +71,7 @@ unlisted: true
                 Sous-tab 1
             </a>
             <a  href="#" 
-                c-tab="sub-bar" 
+                c-tab="sub-tab2" 
                 class="
                 c-dis m-inline-flex
                 c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
@@ -73,7 +80,7 @@ unlisted: true
                 Sous-tab 2
             </a>
             <a  href="#" 
-                c-tab="sub-foobar" 
+                c-tab="sub-tab3" 
                 class="
                 c-dis m-inline-flex
                 c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
@@ -95,12 +102,23 @@ unlisted: true
                 c-dim m-pt-2 m-pr-4 m-pb-2 m-pl-4
                 c-txt m-ff-lead-700 m-ws-nowrap m-td-none m-fs-3
                 c-skin m-c-primary-500 m-bb-11">
-            <div c-tab-name="sub-foo">Sub-tab 1 content</div>
-            <div c-tab-name="sub-bar" class="u-d-none">Sub-tab 2 content</div>
-            <div c-tab-name="sub-foobar" class="u-d-none">Sub-tab 3 content</div>
+            <div c-tab-name="sub-tab1">Contenu sous-tab 1</div>
+            <div c-tab-name="sub-tab2" class="u-d-none">Contenu sous-tab 2</div>
+            <div c-tab-name="sub-tab3" class="u-d-none">Contenu sous-tab 3</div>
         </div>
     </div>
 </div>
+<section class="c-txt m-ff-lead-400">
+    <h1 class="c-txt m-ff-lead-700">Paramètres</h1>
+    <p>Les boutons tabulations et onglets doivent disposer de leurs attributs/classes initiales au chargement de la page. c-tabs.js assure la bascule correcte des classes au clic sur les tabulations ou appel de la méthode open.</p>
+    <p>Les paramètres des tabulations/onglets doivent être renseignés sous forme d'attributs sur chaque conteneur d'onglets:</p>
+    <ul>
+        <li><code>data-pane-default-class</code> définit la classe d'un onglet fermé</li>
+        <li><code>data-pane-active-class</code> définit la classe de l'onglet actif</li>
+        <li><code>data-tab-default-class</code> définit la classe du bouton tab fermé</li>
+        <li><code>data-tab-active-class</code> définit la classe du bouton tab actif</li>
+    </ul>
+</section>
 <!-- DEMO UNIQUEMENT -->
 <style>
     body {
