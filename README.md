@@ -2,6 +2,8 @@
 
 Composant JS dédié à la gestion d'onglets et tabulations.
 
+[Démo](https://ita-design-system.github.io/c-tabs.js/)
+
 ## Installation
 
 ```html
