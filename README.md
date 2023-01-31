@@ -1,6 +1,6 @@
 # c-tabs.js
 
-Composant JS dédié à la gestion d'onglets et tabulations.
+Librairie Javascript dédiée à la gestion d'onglets et tabulations.
 
 [Démo](https://ita-design-system.github.io/c-tabs.js/)
 
