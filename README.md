@@ -1,6 +1,6 @@
 # c-tabs.js
 
-![GitHub release (latest by date)](https://img.shields.io/github/v/release/ita-design-system/c-tabs.js?style=for-the-badge)
+[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ita-design-system/c-tabs.js?style=for-the-badge)](https://github.com/ita-design-system/c-tabs.js/releases)
 
 Librairie Javascript dédiée à la gestion d'onglets et tabulations.
 
