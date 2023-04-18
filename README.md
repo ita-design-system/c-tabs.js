@@ -1,16 +1,43 @@
 # c-tabs.js
 
+![GitHub release (latest by date)](https://img.shields.io/github/v/release/ita-design-system/c-tabs.js?style=for-the-badge)
+
 Librairie Javascript dédiée à la gestion d'onglets et tabulations.
 
 [Démo](https://ita-design-system.github.io/c-tabs.js/)
 
 ## Installation
 
+Il est recommandé de placer les fichiers dans cet ordre avant la balise fin de body.
+
+### En local
+
 ```html
 <body>
-    <!-- Il est recommandé de placer la librairie avant la balise fin de body -->
-    <script src="/path/to/c-tabs.js"></script>
+    <script src="/path/to/c-tabs.js"></script> <!-- obligatoire -->
 </body>
+```
+
+### Sur CDN
+
+via [https://www.jsdelivr.com/](https://www.jsdelivr.com/)
+
+```html
+<!-- Version la plus récente -->
+https://cdn.jsdelivr.net/gh/ita-design-system/c-tabs.js/ui/js/c-tabs.js
+
+<!-- Version la plus récente minifiée -->
+https://cdn.jsdelivr.net/gh/ita-design-system/c-tabs.js/ui/js/c-tabs.min.js
+
+<!-- Typologie avec numéro de version -->
+https://cdn.jsdelivr.net/gh/ita-design-system/c-tabs.js@<TAG_VERSION>/ui/js/c-tabs.js
+
+<!-- Typologie numéro de version + minification automatique -->
+https://cdn.jsdelivr.net/gh/ita-design-system/c-tabs.js@<TAG_VERSION>/ui/js/c-tabs.min.js
+
+<!-- Exemple v0.1.0 -->
+https://cdn.jsdelivr.net/gh/ita-design-system/c-tabs.js@v0.1.0/ui/js/c-tabs.js
+https://cdn.jsdelivr.net/gh/ita-design-system/c-tabs.js@v0.1.0/ui/js/c-tabs.min.js
 ```
 
 ## Usage
