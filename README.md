@@ -5,9 +5,6 @@ layout: libdoc_page.liquid
 permalink: index.html
 date: git Last Modified
 ---
-
-[![GitHub release (latest by date)](https://img.shields.io/github/v/release/ita-design-system/c-tabs.js?style=for-the-badge)](https://github.com/ita-design-system/c-tabs.js/releases)
-
 {% sandbox 'Démo c-tabs.js' %}
 <nav>
     <button type="button"
