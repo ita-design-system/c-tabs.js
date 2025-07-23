@@ -57,7 +57,7 @@ date: git Last Modified
         <p>Magna elitr nonumy sadipscing sadipscing kasd duo nonumy amet, accusam diam et est elitr. Stet ipsum diam diam sit sed..</p>
     </div>
 </div>
-<script src="{{ libdocConfig.htmlBasePathPrefix }}assets/c-tabs.js"></script>
+<script src="/assets/c-tabs.js"></script>
 <!-- DEMO UNIQUEMENT -->
 <style>
     .d-none {

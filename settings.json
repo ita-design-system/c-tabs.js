@@ -19,7 +19,6 @@
     "blogDescription": "Description du blog",
     "blogAuthor": "c-tabs.js Team",
     "blogSlug": "blog",
-    "htmlBasePathPrefix": "/c-tabs.js/",
     "hljsLanguages": [
         "xml",
         "javascript",
